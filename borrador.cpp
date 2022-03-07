@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <iomanip>
 #include <map>
+#include <cstdlib>
 using namespace std;
 
 // Declarar arreglo bidimensional
@@ -25,6 +26,7 @@ void comprar_asiento();
 int main()
 {
 
+    system("cls");
     cout << "Bienvenido al programa de compra de asientos de una sala de cine" << endl;
     while (true)
     {
