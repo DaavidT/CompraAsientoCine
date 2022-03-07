@@ -20,8 +20,7 @@ char letras[10] =
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
 
 void imprimir_asiento();
-void comprar();
-void comprar_asiento(int a, int b);
+void comprar_asiento();
 
 int main()
 {
@@ -40,7 +39,7 @@ int main()
             imprimir_asiento();
             break;
         case 2:
-            comprar();
+            comprar_asiento();
             break;
         case 3:
             exit(0);
@@ -72,40 +71,38 @@ void imprimir_asiento()
     cout << endl;
 }
 
-void comprar()
+// recibe la fila y la columna del asiento que se desea comprar y pasa el valor a 1
+void comprar_asiento()
 {
-
     cout << "Por favor ingrese la cantidad de asientos que desea comprar" << endl;
     int cantidad;
     cin >> cantidad;
+    imprimir_asiento();
+
     for (int i = 0; i < cantidad; i++)
     {
-        imprimir_asiento();
         cout << "Por favor ingrese la fila del asiento que desea comprar" << endl;
         cin >> a;
         cout << "Por favor ingrese la columna del asiento que desea comprar" << endl;
         cin >> b;
-        comprar_asiento(a, b);
-    }
-}
 
-// recibe la fila y la columna del asiento que se desea comprar y pasa el valor a 1
-void comprar_asiento(int a, int b)
-{
-    if (a > 0 && a < 10 && b > 0 && b < 11)
-    {
-        if (asientos[a - 1][b - 1] == 0)
+        if (a > 0 && a < 10 && b > 0 && b < 11)
         {
-            asientos[a - 1][b - 1] = 1;
-            cout << "Asiento comprado" << endl;
+            if (asientos[a - 1][b - 1] == 0)
+            {
+                asientos[a - 1][b - 1] = 1;
+                cout << "Asiento comprado" << endl;
+            }
+            else
+            {
+                cout << "Asiento ocupado. intente con otro" << endl;
+                i = i - 1;
+            }
         }
         else
         {
-            cout << "Asiento ocupado" << endl;
+            cout << "Asiento no existe, intente con otro" << endl;
+            i = i - 1;
         }
-    }
-    else
-    {
-        cout << "Asiento no existe" << endl;
     }
 }
