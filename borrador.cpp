@@ -22,6 +22,7 @@ char letras[10] =
 
 void imprimir_asiento();
 void comprar_asiento();
+int letra_a_numero(char letra);
 
 int main()
 {
@@ -83,8 +84,11 @@ void comprar_asiento()
 
     for (int i = 0; i < cantidad; i++)
     {
+        char fila = 0;
         cout << "Por favor ingrese la fila del asiento que desea comprar" << endl;
-        cin >> a;
+        cin >> fila;
+        a = letra_a_numero(fila);
+
         cout << "Por favor ingrese la columna del asiento que desea comprar" << endl;
         cin >> b;
 
@@ -107,4 +111,43 @@ void comprar_asiento()
             i = i - 1;
         }
     }
+}
+
+// Funcion que convierte una letra a un numero y regresa el numero
+int letra_a_numero(char letra)
+{
+    switch (letra)
+    {
+    case 'A':
+        a = 1;
+        break;
+    case 'B':
+        a = 2;
+        break;
+    case 'C':
+        a = 3;
+        break;
+    case 'D':
+        a = 4;
+        break;
+    case 'E':
+        a = 5;
+        break;
+    case 'F':
+        a = 6;
+        break;
+    case 'G':
+        a = 7;
+        break;
+    case 'H':
+        a = 8;
+        break;
+    case 'I':
+        a = 9;
+        break;
+    case 'J':
+        a = 10;
+        break;
+    }
+    return a;
 }
