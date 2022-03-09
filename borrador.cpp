@@ -9,10 +9,13 @@ using namespace std;
 const int fila = 9;
 const int columna = 10;
 
+// Variables para contadores
 int a = 0;
 int b = 0;
 
 int asientos[fila][columna];
+
+// Declarar mapa
 int numeros[10] =
     {
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -20,6 +23,7 @@ char letras[10] =
     {
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
 
+// Declarar funciones
 void imprimir_asiento();
 void comprar_asiento();
 int letra_a_numero(char letra);
@@ -85,7 +89,7 @@ void comprar_asiento()
     for (int i = 0; i < cantidad; i++)
     {
         char fila = 0;
-        cout << "Por favor ingrese la fila del asiento que desea comprar" << endl;
+        cout << "Por favor ingrese la fila del asiento que desea comprar en mayusculas" << endl;
         cin >> fila;
         a = letra_a_numero(fila);
 
