@@ -1,0 +1,17 @@
+1 Joker 120000
+2 Batman 100000
+3 Blacklight 90000
+4 Duran 120000
+5 Fernandez 120000
+6 Gomez 100000
+7 Hernandez 150000
+8 Jimenez 100000
+9 Manzano 95000
+15 Minions 16
+10 Perez 90000
+11 Sanchez 90000
+12 Sergei 100000
+13 Tarazona 120000
+14 Turegano 100000
+15 Urpiano 90000
+-1

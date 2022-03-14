@@ -3,6 +3,8 @@
 #include <iomanip>
 #include <map>
 #include <cstdlib>
+#include "lista.hpp"
+
 using namespace std;
 
 // Declarar arreglo bidimensional
@@ -26,13 +28,18 @@ char letras[10] =
 // Declarar funciones
 void imprimir_asiento();
 void comprar_asiento();
-int letra_a_numero(char letra);
+int menu_asientos();
 
 int main()
 {
-
     system("cls");
     cout << "Bienvenido al programa de compra de asientos de una sala de cine" << endl;
+    menu_asientos();
+}
+
+int menu_asientos()
+{
+
     while (true)
     {
         cout << "Ingrese que desea hacer: " << endl;
@@ -115,43 +122,4 @@ void comprar_asiento()
             i = i - 1;
         }
     }
-}
-
-// Funcion que convierte una letra a un numero y regresa el numero
-int letra_a_numero(char letra)
-{
-    switch (letra)
-    {
-    case 'A':
-        a = 1;
-        break;
-    case 'B':
-        a = 2;
-        break;
-    case 'C':
-        a = 3;
-        break;
-    case 'D':
-        a = 4;
-        break;
-    case 'E':
-        a = 5;
-        break;
-    case 'F':
-        a = 6;
-        break;
-    case 'G':
-        a = 7;
-        break;
-    case 'H':
-        a = 8;
-        break;
-    case 'I':
-        a = 9;
-        break;
-    case 'J':
-        a = 10;
-        break;
-    }
-    return a;
 }
